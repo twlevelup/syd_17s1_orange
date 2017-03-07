@@ -10,7 +10,7 @@ dependencies:
     - npm --version # use a custom version of bundler
     - npm install
   post:
-    - rm -r home/ubuntu/.m2
+    - rm -r node_modules
 test:
   override:
     - npm run test
