@@ -10,7 +10,7 @@ dependencies:
     - npm --version # use a custom version of bundler
     - npm install
   post:
-    - rm -r home/ubuntu/.m2, home/ubuntu/.go_workspace, home/ubuntu/.cache/bower, home/ubuntu/syd_17s1_orange/node_modules
+    - rm -r home/ubuntu/.m2
 test:
   override:
     - npm run test
