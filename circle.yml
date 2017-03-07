@@ -10,7 +10,7 @@ dependencies:
     - npm --version # use a custom version of bundler
     - npm install
   post:
-    - rm -r node_modules
+    - rm -r .m2
 test:
   override:
     - npm run test
