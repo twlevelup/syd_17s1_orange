@@ -1,5 +1,4 @@
 # LevelUp Watch Edition App Development Environment
-#Testing Build ORANGE
 [![Build Status](https://snap-ci.com/twlevelup/watch_edition/branch/master/build_image)](https://snap-ci.com/twlevelup/watch_edition/branch/master)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
