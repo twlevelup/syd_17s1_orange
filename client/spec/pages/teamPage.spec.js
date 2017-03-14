@@ -21,5 +21,8 @@ describe('Check-in dance', () => {
     it('should include the text "Michelle Leman"', () => {
       expect(page.$el).toContainText('Michelle Leman');
     });
+    it('should include the text "Rosie"', () => {
+      expect(page.$el).toContainText('Rosie');
+    });
   });
 });
