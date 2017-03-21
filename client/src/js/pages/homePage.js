@@ -13,6 +13,7 @@ const homePage = Page.extend({
     right: 'goToContacts',
     top: 'scrollUp',
     bottom: 'scrollDown',
+    left: 'goToMyDemoPage',
   },
 
   goToContacts() {
@@ -30,6 +31,10 @@ const homePage = Page.extend({
   render() {
     this.$el.html(this.template());
     return this;
+  },
+
+  goToMyDemoPage() {
+    window.App.navigate('demo');
   },
 
 });

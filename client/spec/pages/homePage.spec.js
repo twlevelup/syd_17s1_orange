@@ -46,6 +46,15 @@ describe('The Home Page', () => {
       expect(page.$el).toContainText('Hello, Team Orange!');
     });
 
+    describe('left', () => {
+      it('should take the user to the demo page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('demo');
+      });
+    });
+
     it('returns the view object', () => {
       expect(page.render()).toEqual(page);
     });
