@@ -38,13 +38,6 @@ describe('The Home Page', () => {
         expect(window.App.navigate).toHaveBeenCalled();
       });
     });
-  });
-
-  describe('rendering', () => {
-    it('should produce the correct HTML', () => {
-      page.render();
-      expect(page.$el).toContainText('Hello, Team Orange!');
-    });
 
     describe('left', () => {
       it('should take the user to the demo page', () => {
@@ -53,6 +46,13 @@ describe('The Home Page', () => {
         eventHub.trigger('left');
         expect(window.App.navigate).toHaveBeenCalledWith('demo');
       });
+    });
+  });
+
+  describe('rendering', () => {
+    it('should produce the correct HTML', () => {
+      page.render();
+      expect(page.$el).toContainText('Hello, Team Orange!');
     });
 
     it('returns the view object', () => {
