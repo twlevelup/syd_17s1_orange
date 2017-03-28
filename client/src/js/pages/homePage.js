@@ -12,7 +12,7 @@ const homePage = Page.extend({
   buttonEvents: {
     right: 'goToContacts',
     top: 'scrollUp',
-    bottom: 'scrollDown',
+    bottom: 'goToReportPage',
     left: 'goToMyDemoPage',
   },
 
@@ -37,6 +37,9 @@ const homePage = Page.extend({
     window.App.navigate('demo');
   },
 
+  goToReportPage() {
+    window.App.navigate('report');
+  },
 });
 
 module.exports = homePage;
