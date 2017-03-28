@@ -31,11 +31,11 @@ describe('The Home Page', () => {
     });
 
     describe('bottom', () => {
-      it('should scroll the watch face down', () => {
-        spyOn(page, 'scrollDown');
+      it('should load the report page', () => {
+        spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('bottom');
-        expect(page.scrollDown).toHaveBeenCalled();
+        expect(window.App.navigate).toHaveBeenCalled();
       });
     });
   });
