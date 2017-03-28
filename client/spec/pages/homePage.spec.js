@@ -50,11 +50,6 @@ describe('The Home Page', () => {
   });
 
   describe('rendering', () => {
-    it('should produce the correct HTML', () => {
-      page.render();
-      expect(page.$el).toContainText('Hello, Team Orange!');
-    });
-
     it('returns the view object', () => {
       expect(page.render()).toEqual(page);
     });
