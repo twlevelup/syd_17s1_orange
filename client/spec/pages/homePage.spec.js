@@ -40,11 +40,11 @@ describe('The Home Page', () => {
     });
 
     describe('left', () => {
-      it('should take the user to the demo page', () => {
+      it('should take the user to the info page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('demo');
+        expect(window.App.navigate).toHaveBeenCalledWith('info');
       });
     });
   });

@@ -13,8 +13,9 @@ const homePage = Page.extend({
     right: 'goToContacts',
     top: 'scrollUp',
     bottom: 'goToReportPage',
-    left: 'goToMyDemoPage',
+    left: 'goToInfoPage',
   },
+
 
   goToContacts() {
     window.App.navigate('contacts');
@@ -33,8 +34,8 @@ const homePage = Page.extend({
     return this;
   },
 
-  goToMyDemoPage() {
-    window.App.navigate('demo');
+  goToInfoPage() {
+    window.App.navigate('info');
   },
 
   goToReportPage() {

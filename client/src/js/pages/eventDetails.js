@@ -16,7 +16,9 @@ const eventDetails = Page.extend({
     top: 'scrollUp',
     bottom: 'scrollDown',
     left: 'back',
+
   },
+
 
   scrollUp() {
     $('#watch-face').animate({ scrollTop: '-=70px' });
