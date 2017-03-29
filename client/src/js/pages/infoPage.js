@@ -12,10 +12,10 @@ const infoPage = Page.extend({
     // top: 'scrollUp',
     // bottom: 'scrollDown',
     // left: 'goToInfoPage',
-    face: 'home'
+    face: 'home',
   },
 
-  home(){
+  home() {
     window.App.navigate('home');
   },
 
