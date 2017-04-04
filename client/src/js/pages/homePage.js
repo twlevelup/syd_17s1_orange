@@ -10,22 +10,18 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToContacts',
+    right: 'goToDistressPage',
     top: 'scrollUp',
     bottom: 'goToReportPage',
     left: 'goToMyDemoPage',
-  },
-
-  goToContacts() {
-    window.App.navigate('contacts');
   },
 
   scrollUp() {
     $('#watch-face').animate({ scrollTop: '-=70px' });
   },
 
-  scrollDown() {
-    $('#watch-face').animate({ scrollTop: '+=70px' });
+  goToReportPage() {
+    window.App.navigate('report');
   },
 
   render() {
@@ -36,10 +32,10 @@ const homePage = Page.extend({
   goToMyDemoPage() {
     window.App.navigate('demo');
   },
-
-  goToReportPage() {
-    window.App.navigate('report');
+  goToDistressPage() {
+    window.App.navigate('distress');
   },
+
 });
 
 module.exports = homePage;
