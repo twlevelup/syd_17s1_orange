@@ -5,6 +5,7 @@ const contacts = require('./contactsPage');
 const eventsList = require('./eventsList');
 const eventDetails = require('./eventDetails');
 const demo = require('./demoPage');
+const distress = require('./distressPage');
 const report = require('./reportPage');
 const info = require('./infoPage');
 
@@ -17,6 +18,7 @@ module.exports = {
   eventsList,
   eventDetails,
   demo,
+  distress,
   report,
   info,
 };
