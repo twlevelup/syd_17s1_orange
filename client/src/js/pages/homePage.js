@@ -13,9 +13,11 @@ const homePage = Page.extend({
     right: 'goToDistressPage',
     top: 'scrollUp',
     bottom: 'goToReportPage',
-    left: 'goToMyDemoPage',
+    left: 'goToInfoPage',
   },
-
+  goToContacts() {
+    window.App.navigate('contacts');
+  },
   scrollUp() {
     $('#watch-face').animate({ scrollTop: '-=70px' });
   },
@@ -29,8 +31,8 @@ const homePage = Page.extend({
     return this;
   },
 
-  goToMyDemoPage() {
-    window.App.navigate('demo');
+  goToInfoPage() {
+    window.App.navigate('info');
   },
   goToDistressPage() {
     window.App.navigate('distress');
