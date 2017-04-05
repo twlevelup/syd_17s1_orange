@@ -1,9 +1,14 @@
 const Backbone = require('backbone');
 const eventsData = require('./events.json');
+const details = require('./details.json');
 
 function Storage() {
   this.eventsData = new Backbone.Collection();
   this.eventsData.add(eventsData.events);
+  this.myName = details.name;
+  this.myPhone = details.phone;
+  this.myLong = details.gps_long;
+  this.myLat = details.gps_lat;
 }
 
 module.exports = new Storage();
