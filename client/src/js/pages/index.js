@@ -8,6 +8,7 @@ const demo = require('./demoPage');
 const distress = require('./distressPage');
 const report = require('./reportPage');
 const info = require('./infoPage');
+const distressConfirm = require('./distressConfirm');
 
 // TODO autogenerate this file
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
   eventDetails,
   demo,
   distress,
+  distressConfirm,
   report,
   info,
 };

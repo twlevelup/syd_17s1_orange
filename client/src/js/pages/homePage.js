@@ -10,7 +10,7 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToDistressPage',
+    right: 'goToDistressConfirmPage',
     top: 'scrollUp',
     bottom: 'goToReportPage',
     left: 'goToInfoPage',
@@ -34,8 +34,8 @@ const homePage = Page.extend({
   goToInfoPage() {
     window.App.navigate('info');
   },
-  goToDistressPage() {
-    window.App.navigate('distress');
+  goToDistressConfirmPage() {
+    window.App.navigate('distressConfirm');
   },
 
 });
