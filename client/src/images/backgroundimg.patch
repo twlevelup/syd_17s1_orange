@@ -1,0 +1,62 @@
+diff --git a/client/src/js/pages/homePage.js b/client/src/js/pages/homePage.js
+index be79c67..e0c755d 100644
+--- a/client/src/js/pages/homePage.js
++++ b/client/src/js/pages/homePage.js
+@@ -23,18 +23,22 @@ const homePage = Page.extend({
+   },
+
+   goToReportPage() {
++    $('#watch').removeClass('home');
+     window.App.navigate('report');
+   },
+
+   render() {
+     this.$el.html(this.template());
++    $('#watch').addClass('case home');
+     return this;
+   },
+
+   goToInfoPage() {
++    $('#watch').removeClass('home');
+     window.App.navigate('info');
+   },
+   goToDistressConfirmPage() {
++    $('#watch').removeClass('home');
+     window.App.navigate('distressConfirm');
+   },
+
+diff --git a/client/src/styles/pages/_home.scss b/client/src/styles/pages/_home.scss
+index 3905d6d..3266791 100644
+--- a/client/src/styles/pages/_home.scss
++++ b/client/src/styles/pages/_home.scss
+@@ -1,9 +1,5 @@
+ #home {
+   font-style: italic;
+-  background-image: url("../images/home_nav.png");
+-  background-position: center;
+-  background-repeat: no-repeat;
+-  background-size: cover;
+   height: 100%;
+   width: 100%;
+ }
+diff --git a/client/src/styles/watch.scss b/client/src/styles/watch.scss
+index e4cd293..47ee830 100644
+--- a/client/src/styles/watch.scss
++++ b/client/src/styles/watch.scss
+@@ -80,9 +80,15 @@
+   background: #3F484A; /* Dial colour */
+   border: 10px solid silver; /* Face border */
+   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
++  
++  &.home{
++    background-image: url("../images/home_nav.png");
++    background-position: center;
++    background-repeat: no-repeat;
++    background-size: cover;
++  }
+ }
+
+-
+ .strap{
+   position:absolute;
+   z-index:1;
