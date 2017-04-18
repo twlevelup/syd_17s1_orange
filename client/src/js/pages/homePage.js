@@ -23,18 +23,22 @@ const homePage = Page.extend({
   },
 
   goToReportPage() {
+    $('#watch').removeClass('home');
     window.App.navigate('report');
   },
 
   render() {
     this.$el.html(this.template());
+    $('#watch').addClass('case home');
     return this;
   },
 
   goToInfoPage() {
+    $('#watch').removeClass('home');
     window.App.navigate('info');
   },
   goToDistressConfirmPage() {
+    $('#watch').removeClass('home');
     window.App.navigate('distressConfirm');
   },
 

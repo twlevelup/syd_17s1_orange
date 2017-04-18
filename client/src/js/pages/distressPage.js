@@ -10,11 +10,13 @@ const distressPage = Page.extend({
     face: 'backToHome',
   },
   backToHome() {
+    $('#watch').removeClass('distress');
     window.App.navigate('home');
   },
   render() {
-    this.$el.html(this.template({ name: 'Jane' }));
-    return this;
+    this.$el.html(this.template());
++    $('#watch').addClass('case distress');
+     return this;
   },
 });
 

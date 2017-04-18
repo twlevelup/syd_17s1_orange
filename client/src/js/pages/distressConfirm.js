@@ -12,13 +12,16 @@ const distressConfirm = Page.extend({
 
   },
   backToHome() {
+    $('#watch').removeClass('distressconfirm');
     window.App.navigate('home');
   },
   goToDistress() {
+    $('#watch').removeClass('distressconfirm');
     window.App.navigate('distress');
   },
   render() {
     this.$el.html(this.template());
+    $('#watch').addClass('case distressconfirm');
     return this;
   },
 });
