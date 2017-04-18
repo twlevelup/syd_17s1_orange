@@ -1,4 +1,5 @@
 const Page = require('watch_framework').Page;
+const $ = require('jquery');
 
 const template = require('../../templates/pages/distress.hbs');
 
@@ -15,8 +16,8 @@ const distressPage = Page.extend({
   },
   render() {
     this.$el.html(this.template());
-+    $('#watch').addClass('case distress');
-     return this;
+    $('#watch').addClass('case distress');
+    return this;
   },
 });
 

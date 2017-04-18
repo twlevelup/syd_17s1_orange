@@ -88,6 +88,22 @@
     background-size: cover;
   }
 
+  &.report{
+    background-image: url("../images/home_nav.png");
+    // TO DO: CHANGE BACKGROUND IMAGE
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.location{
+    background-image: url("../images/home_nav.png");
+    // TO DO: CHANGE BACKGROUND IMAGE
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &.distressconfirm{
     background-image: url("../images/distressbg.png");
     background-position: center;

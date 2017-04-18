@@ -10,6 +10,7 @@ const report = require('./reportPage');
 const info = require('./infoPage');
 const distressConfirm = require('./distressConfirm');
 const reportSummary = require('./reportSummaryPage');
+const location = require('./locationPage');
 
 // TODO autogenerate this file
 module.exports = {

@@ -19,10 +19,10 @@ describe('The Location Page', () => {
       eventHub.trigger('face');
       expect(window.App.navigate).toHaveBeenCalledWith('home');
     });
-    it('should navigate to summary page when workplace [up] is pressed', () => {
+    it('should navigate to summary page when workplace [top] is pressed', () => {
       spyOn(window.App, 'navigate');
       page.configureButtons();
-      eventHub.trigger('up');
+      eventHub.trigger('top');
       expect(window.App.navigate).toHaveBeenCalledWith('reportSummary');
     });
     it('should navigate to summary page when school [left] is pressed', () => {
@@ -37,18 +37,18 @@ describe('The Location Page', () => {
       eventHub.trigger('right');
       expect(window.App.navigate).toHaveBeenCalledWith('reportSummary');
     });
-    it('should navigate to summary page when other [down] is pressed', () => {
+    it('should navigate to summary page when other [bottom] is pressed', () => {
       spyOn(window.App, 'navigate');
       page.configureButtons();
-      eventHub.trigger('down');
+      eventHub.trigger('bottom');
       expect(window.App.navigate).toHaveBeenCalledWith('reportSummary');
     });
   });
 
   describe('parameter storage', () => {
-    it('should store workplace as the location when workplace [up] is pressed', () => {
+    it('should store workplace as the location when workplace [top] is pressed', () => {
       page.configureButtons();
-      eventHub.trigger('up');
+      eventHub.trigger('top');
       expect(storage.reportLocation).toEqual('workplace');
     });
     it('should store school as the location when school [left] is pressed', () => {
@@ -61,9 +61,9 @@ describe('The Location Page', () => {
       eventHub.trigger('right');
       expect(storage.reportLocation).toEqual('home');
     });
-    it('should store other as the location when other [down] is pressed', () => {
+    it('should store other as the location when other [bottom] is pressed', () => {
       page.configureButtons();
-      eventHub.trigger('down');
+      eventHub.trigger('bottom');
       expect(storage.reportLocation).toEqual('other');
     });
   });

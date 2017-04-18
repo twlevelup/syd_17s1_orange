@@ -1,15 +1,18 @@
 const Page = require('watch_framework').Page;
 const storage = require('../../storage');
+const $ = require('jquery');
+const template = require('../../templates/pages/location.hbs');
 
 const locationPage = Page.extend({
   id: 'location',
+  template,
 
   buttonEvents: {
     face: 'backToHome',
-    up: 'workplace',
+    top: 'workplace',
     left: 'school',
     right: 'home',
-    down: 'other',
+    bottom: 'other',
   },
 
   backToHome() {
@@ -37,7 +40,8 @@ const locationPage = Page.extend({
   },
 
   render() {
-    this.$el.html();
+    this.$el.html(this.template());
+    $('#watch').addClass('case location');
     return this;
   },
 
