@@ -1,5 +1,4 @@
 const Page = require('watch_framework').Page;
-const storage = require('../../storage');
 const template = require('../../templates/pages/report.hbs');
 
 const reportPage = Page.extend({
@@ -8,19 +7,19 @@ const reportPage = Page.extend({
 
   buttonEvents: {
     face: 'backToHome',
+    top: 'goToLocation',
   },
 
   backToHome() {
     window.App.navigate('home');
   },
 
-  render() {
-    const name = storage.myName;
-    const phone = storage.myPhone;
-    const long = storage.myLong;
-    const lat = storage.myLat;
+  goToLocation() {
+    window.App.navigate('location');
+  },
 
-    this.$el.html(this.template({ name, phone, long, lat }));
+  render() {
+    this.$el.html(this.template());
     return this;
   },
 });
