@@ -37,11 +37,6 @@ const homePage = Page.extend({
 
   render() {
     this.$el.html(this.template());
-    // this.getCoordinates((position) => {
-    //   navigator.geolocation.getCurrentPosition(position);
-    //   $('#watch').addClass('case home');
-    //   return this;
-    // });
     $('#watch').addClass('case home');
     return this;
   },
@@ -51,6 +46,9 @@ const homePage = Page.extend({
     window.App.navigate('info');
   },
   goToDistressConfirmPage() {
+    // this.getCoordinates((position) => {
+    //   navigator.geolocation.getCurrentPosition(position);
+    // });
     $('#watch').removeClass('home');
     window.App.navigate('distressConfirm');
   },
