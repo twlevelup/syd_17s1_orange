@@ -16,7 +16,7 @@ const locationPage = Page.extend({
   },
 
   backToHome() {
-    $('#watch').removeClass('reportLocation');
+    $('#watch').removeClass('case location');
     window.App.navigate('home');
   },
 
