@@ -41,6 +41,9 @@ const homePage = Page.extend({
     const m = today.getMonth() + 1;
     const y = today.getYear() + 1900;
     this.$el.html(this.template({ d, m, y }));
+    // this.getCoordinates((position) => {
+    //  navigator.geolocation.getCurrentPosition(position);
+    // });
     $('#watch').addClass('case home');
     return this;
   },
@@ -50,9 +53,6 @@ const homePage = Page.extend({
     window.App.navigate('info');
   },
   goToDistressConfirmPage() {
-    // this.getCoordinates((position) => {
-    //   navigator.geolocation.getCurrentPosition(position);
-    // });
     $('#watch').removeClass('home');
     window.App.navigate('distressConfirm');
   },
