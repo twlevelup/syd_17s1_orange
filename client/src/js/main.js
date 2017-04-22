@@ -1,5 +1,6 @@
 require('../styles/main.scss');
 require('../fonts/fonts.scss');
+require('../styles/info.scss');
 
 const App = require('./app');
 const NotificationsForm = require('watch_framework').NotificationsForm;

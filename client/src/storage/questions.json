@@ -1,0 +1,156 @@
+{
+  "topics": [
+    {
+      "name": "How do I know if someone is being harassed and what should I do?",
+      "type": "Topic",
+      "questions": [
+        {
+          "id": 0,
+          "question": "Is the person someone you know?",
+          "type": "Question",
+          "answers": {
+            "yesQID": 1,
+            "noQID": 2
+          }
+        },
+        {
+          "id": 1,
+          "question":"Have you noticed a change in their behaviour?",
+          "type": "Question",
+          "answers": {
+            "yesQID": 3,
+            "noQID": 4
+          }
+        },
+        {
+          "id": 2,
+          "question":"Are they in the middle of a disagreement/being harassed right now?",
+          "type": "Question",
+          "answers": {
+            "yesQID": 5,
+            "noQID": 6
+          }
+        },
+        {
+          "id": 3,
+          "question":"Have you noticed any of the following: - Sad or withdrawn? - Defensive or angry? - Avoiding you or others? ",
+          "type": "Question",
+          "answers": {
+            "yesQID": 4,
+            "noQID": 7
+          }
+        },
+        {
+          "id": 4,
+          "question":"Have you noticed any physical changes (i.e. bruising or other physical marks?)",
+          "type": "Question",
+          "answers": {
+            "yesQID": 8,
+            "noQID": 9
+          }
+        },
+        {
+          "id": 5,
+          "question":"Are they in any immediate danger?",
+          "type": "Question",
+          "answers": {
+            "yesQID": 10,
+            "noQID": 6,
+            "prevQID":2
+          }
+        },
+        {
+          "id": 6,
+          "question":"Do they appear to be distressed or watching out for something or someone?",
+          "type": "Question",
+          "answers": {
+            "yesQID": 11,
+            "noQID": 12,
+            "prevQID":2
+          }
+        },
+        {
+          "id": 7,
+          "question":"This person is possibly being abused/harassed. Reach out first, ask how they are, let them know you care. Look for any physical/behavioural changes.",
+          "type": "Advice",
+          "answers": {
+            "yesQID": "end",
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 8,
+          "question":"Are you comfortable reaching out to this person?",
+          "type": "Question",
+          "answers": {
+            "yesQID": 13,
+            "noQID": 14
+          }
+        },
+        {
+          "id": 9,
+          "question":"This person may be suffering from mental abuse. Please reach out to them first, let them know you care.",
+          "type": "Advice",
+          "answers": {
+            "yesQID": "end",
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 10,
+          "question":"Send out a distress signal now to alert appropriate authority.",
+          "type": "Alert",
+          "answers": {
+            "yesQID": "end",
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 11,
+          "question":"They may be avoiding someone. Offer to take them to a safe place. Stay with them, make sure you are in an open area and visible to people. Alert authorities.",
+          "type": "Alert",
+          "answers": {
+            "yesQID": "end" ,
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 12,
+          "question":"Try reaching out to the individual to ask how they are and if they require any assistance. Mention any red flags that you may have noticed.",
+          "type": "Advice",
+          "answers": {
+            "yesQID": "end" ,
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 13,
+          "question":"This person is most likely being abused/harassed. Reach out to them immediately, let them know what you observed and that you care. Alert authorities.",
+          "type": "Alert",
+          "answers": {
+            "yesQID": "end" ,
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 14,
+          "question":"This person is most likely being abused/harassed. Contact the authorities immediately.",
+          "type": "Alert",
+          "answers": {
+            "yesQID": "end" ,
+            "noQID": "end"
+          }
+        },
+        {
+          "id": 15,
+          "question":"How do I know if someone is being harassed and what should I do?",
+          "type": "Topic",
+          "answers": {
+            "yesQID": "end" ,
+            "noQID": "end"
+          }
+        }
+      ]
+    }
+  ]
+}

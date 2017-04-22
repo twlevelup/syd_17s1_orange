@@ -1,0 +1,56 @@
+
+
+.yesButton{
+  position: absolute;
+  top: 6px;
+  left: 125px;
+}
+.noButton{
+  position: absolute;
+  bottom: -3px;
+  left: 127px;
+}
+.enterButton{
+  position: absolute;
+  bottom: 113px;
+  right: -14px;
+  transform: rotate(90deg);
+}
+.distressButton{
+  position: absolute;
+  bottom: 113px;
+  right: -25px;
+  transform: rotate(90deg);
+}
+.backButton{
+  position: absolute;
+  bottom: 115px;
+  left: -10px;
+  transform: rotate(-90deg);
+}
+
+.infoWrapper{
+  padding: 10px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+  color: #222;
+}
+
+.button{
+  color: #222;
+}
+
+
+#watch.question.info{
+  background-color: rgba(110, 253, 0, 1);
+}
+
+#watch.topic.info{
+  background-color: rgba(110, 253, 0, 1);
+}
+
+#watch.advice.info{
+  background-color: rgba(110, 253, 0, 0.7);
+}
