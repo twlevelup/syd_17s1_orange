@@ -11,6 +11,7 @@ const info = require('./infoPage');
 const distressConfirm = require('./distressConfirm');
 const reportSummary = require('./reportSummaryPage');
 const location = require('./locationPage');
+const reportConfirm = require('./reportConfirm');
 
 // TODO autogenerate this file
 module.exports = {
@@ -27,4 +28,5 @@ module.exports = {
   info,
   location,
   reportSummary,
+  reportConfirm,
 };

@@ -49,22 +49,22 @@ describe('The Location Page', () => {
     it('should store workplace as the location when workplace [top] is pressed', () => {
       page.configureButtons();
       eventHub.trigger('top');
-      expect(storage.reportLocation).toEqual('workplace');
+      expect(storage.reportLocation).toEqual('Workplace');
     });
     it('should store school as the location when school [left] is pressed', () => {
       page.configureButtons();
       eventHub.trigger('left');
-      expect(storage.reportLocation).toEqual('school');
+      expect(storage.reportLocation).toEqual('School');
     });
     it('should store home as the location when home [right] is pressed', () => {
       page.configureButtons();
       eventHub.trigger('right');
-      expect(storage.reportLocation).toEqual('home');
+      expect(storage.reportLocation).toEqual('Home');
     });
     it('should store other as the location when other [bottom] is pressed', () => {
       page.configureButtons();
       eventHub.trigger('bottom');
-      expect(storage.reportLocation).toEqual('other');
+      expect(storage.reportLocation).toEqual('Other');
     });
   });
 });

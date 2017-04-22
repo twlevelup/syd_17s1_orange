@@ -1,7 +1,7 @@
 .screen{
   padding-left: 1.5em;
   font-family: monospace;
-  color: #FFF;
+  color: #000;
 }
 
 #watch-face{
@@ -89,15 +89,14 @@
   }
 
   &.report{
-    background-image: url("../images/home_nav.png");
-    // TO DO: CHANGE BACKGROUND IMAGE
+    background-image: url("../images/reporthome.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   &.location{
-    background-image: url("../images/home_nav.png");
+    background-image: url("../images/ReportLocation.png");
     // TO DO: CHANGE BACKGROUND IMAGE
     background-position: center;
     background-repeat: no-repeat;
@@ -113,6 +112,20 @@
 
   &.distress{
     background-image: url("../images/distress.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.reportSummary{
+    background-image: url("../images/reportconfirm1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.reportConfirm{
+    background-image: url("../images/reportsent.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

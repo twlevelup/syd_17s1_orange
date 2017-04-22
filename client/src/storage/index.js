@@ -11,6 +11,7 @@ function Storage() {
   this.myLong = details.gps_long;
   this.myLat = details.gps_lat;
   this.reportLocation = report.location;
+  this.reportTime = report.time;
 }
 
 module.exports = new Storage();

@@ -2,7 +2,7 @@ const Page = require('watch_framework').Page;
 const $ = require('jquery');
 
 
-const storage = require('../../storage');
+// const storage = require('../../storage');
 const template = require('../../templates/pages/distressConfirm.hbs');
 
 const distressConfirm = Page.extend({

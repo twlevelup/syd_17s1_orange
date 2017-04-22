@@ -16,26 +16,31 @@ const locationPage = Page.extend({
   },
 
   backToHome() {
+    $('#watch').removeClass('reportLocation');
     window.App.navigate('home');
   },
 
   workplace() {
-    storage.reportLocation = 'workplace';
+    storage.reportLocation = 'Workplace';
+    $('#watch').removeClass('case location');
     window.App.navigate('reportSummary');
   },
 
   school() {
-    storage.reportLocation = 'school';
+    storage.reportLocation = 'School';
+    $('#watch').removeClass('case location');
     window.App.navigate('reportSummary');
   },
 
   home() {
-    storage.reportLocation = 'home';
+    storage.reportLocation = 'Home';
+    $('#watch').removeClass('case location');
     window.App.navigate('reportSummary');
   },
 
   other() {
-    storage.reportLocation = 'other';
+    storage.reportLocation = 'Other';
+    $('#watch').removeClass('case location');
     window.App.navigate('reportSummary');
   },
 
