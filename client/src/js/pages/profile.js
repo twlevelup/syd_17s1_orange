@@ -21,8 +21,8 @@ const profile = Page.extend({
     const phone = storage.myPhone;
     const lat = storage.myLat;
     const long = storage.myLong;
-    this.$el.html(this.template({ name, phone, lat, long }));
     $('#watch').addClass('case profile');
+    this.$el.html(this.template({ name, phone, lat, long }));
     return this;
   },
 });
