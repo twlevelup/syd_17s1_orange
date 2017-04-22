@@ -114,7 +114,7 @@ const infoPage = Page.extend({
         enterButton = '';
         distressButton = '';
         $('#watch').attr('class', 'question info case');
-      break;
+        break;
       case 'Topic':
         yesButton = '';
         noButton = '';
@@ -122,7 +122,7 @@ const infoPage = Page.extend({
         enterButton = 'ENTER';
         distressButton = '';
         $('#watch').attr('class', 'topic info case');
-      break;
+        break;
       case 'Alert':
         yesButton = '';
         noButton = '';
@@ -130,7 +130,7 @@ const infoPage = Page.extend({
         enterButton = '';
         distressButton = 'DISTRESS';
         $('#watch').attr('class', 'advice info case');
-      break;
+        break;
       default:
         yesButton = '';
         noButton = '';
@@ -138,7 +138,7 @@ const infoPage = Page.extend({
         enterButton = '';
         distressButton = '';
         $('#watch').attr('class', 'advice info case');
-      break;
+        break;
     }
 
     this.$el.html(this.template({
