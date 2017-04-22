@@ -11,15 +11,14 @@ const homePage = Page.extend({
 
   buttonEvents: {
     right: 'goToDistressConfirmPage',
-    top: 'scrollUp',
+    top: 'goToProfile',
     bottom: 'goToReportPage',
     left: 'goToInfoPage',
   },
-  goToContacts() {
-    window.App.navigate('contacts');
-  },
-  scrollUp() {
-    $('#watch-face').animate({ scrollTop: '-=70px' });
+
+  goToProfile() {
+    $('#watch').removeClass('home');
+    window.App.navigate('profile');
   },
 
   goToReportPage() {

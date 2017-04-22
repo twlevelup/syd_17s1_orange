@@ -22,11 +22,11 @@ describe('The Home Page', () => {
     });
 
     describe('top', () => {
-      it('should scroll the watch face up', () => {
-        spyOn(page, 'scrollUp');
+      it('should load the profile page', () => {
+        spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('top');
-        expect(page.scrollUp).toHaveBeenCalled();
+        expect(window.App.navigate).toHaveBeenCalledWith('profile');
       });
     });
 
@@ -35,7 +35,7 @@ describe('The Home Page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('bottom');
-        expect(window.App.navigate).toHaveBeenCalled();
+        expect(window.App.navigate).toHaveBeenCalledWith('report');
       });
     });
 
