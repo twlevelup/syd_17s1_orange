@@ -29,7 +29,7 @@ const infoPage = Page.extend({
 
   back() {
     alertPage = false;
-    if (topicPage !== true) {
+    if (!topicPage) {
       const previousId = prevQIDArray.pop();
       questionIndex = previousId;
       if (previousId === 'topic') {
@@ -82,6 +82,7 @@ const infoPage = Page.extend({
     }
     this.render(currentQuestion, currentType);
   },
+
   scrollDown() {
     const noQID = questionsData.topics[topicIndex].questions[questionIndex].answers.noQID;
     if (noQID === 'end' || topicPage === true) {
