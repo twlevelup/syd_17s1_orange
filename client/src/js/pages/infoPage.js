@@ -26,6 +26,7 @@ const infoPage = Page.extend({
     face: 'home',
     left: 'back',
   },
+
   back() {
     alertPage = false;
     if (topicPage !== true) {
@@ -45,19 +46,21 @@ const infoPage = Page.extend({
       this.render(question, questionType);
     }
   },
+
   home() {
     questionIndex = 0;
     topicPage = true;
     alertPage = false;
     window.App.navigate('home');
   },
+
   enter() {
     if (topicPage === true) {
       const firstQuestion = questionsData.topics[topicIndex].questions[0].question;
       const firstQuestionType = questionsData.topics[topicIndex].questions[0].type;
       this.render(firstQuestion, firstQuestionType);
       topicPage = false;
-    } else if (alertPage == true) {
+    } else if (alertPage === true) {
       questionIndex = 0;
       alertPage = false;
       topicPage = true;
@@ -74,9 +77,9 @@ const infoPage = Page.extend({
     questionIndex = yesQID;
     const currentType = questionsData.topics[topicIndex].questions[yesQID].type;
     const currentQuestion = questionsData.topics[topicIndex].questions[yesQID].question;
-    if (currentType == 'Alert') {
+    if (currentType === 'Alert') {
       alertPage = true;
-    };
+    }
     this.render(currentQuestion, currentType);
   },
   scrollDown() {
@@ -88,9 +91,9 @@ const infoPage = Page.extend({
     questionIndex = noQID;
     const currentType = questionsData.topics[topicIndex].questions[noQID].type;
     const currentQuestion = questionsData.topics[topicIndex].questions[noQID].question;
-    if (currentType == 'Alert') {
+    if (currentType === 'Alert') {
       alertPage = true;
-    };
+    }
     this.render(currentQuestion, currentType);
   },
 
@@ -101,36 +104,51 @@ const infoPage = Page.extend({
       renderQuestion = questionsData.topics[topicIndex].name;
       renderType = questionsData.topics[topicIndex].type;
     }
-    if (renderType === 'Question') {
-      yesButton = 'YES';
-      noButton = 'NO';
-      backButton = 'BACK';
-      enterButton = '';
-      distressButton = '';
-      $('#watch').attr('class', 'question info case');
-    } else if (renderType === 'Topic') {
-      yesButton = '';
-      noButton = '';
-      backButton = '';
-      enterButton = 'ENTER';
-      distressButton = '';
-      $('#watch').attr('class', 'topic info case');
-    } else if (renderType === 'Alert') {
-      yesButton = '';
-      noButton = '';
-      backButton = 'BACK';
-      enterButton = '';
-      distressButton = 'DISTRESS';
-      $('#watch').attr('class', 'advice info case');
-    } else {
-      yesButton = '';
-      noButton = '';
-      backButton = 'BACK';
-      enterButton = '';
-      distressButton = '';
-      $('#watch').attr('class', 'advice info case');
+
+    switch (renderType) {
+      case 'Question':
+        yesButton = 'YES';
+        noButton = 'NO';
+        backButton = 'BACK';
+        enterButton = '';
+        distressButton = '';
+        $('#watch').attr('class', 'question info case');
+      break;
+      case 'Topic':
+        yesButton = '';
+        noButton = '';
+        backButton = '';
+        enterButton = 'ENTER';
+        distressButton = '';
+        $('#watch').attr('class', 'topic info case');
+      break;
+      case 'Alert':
+        yesButton = '';
+        noButton = '';
+        backButton = 'BACK';
+        enterButton = '';
+        distressButton = 'DISTRESS';
+        $('#watch').attr('class', 'advice info case');
+      break;
+      default:
+        yesButton = '';
+        noButton = '';
+        backButton = 'BACK';
+        enterButton = '';
+        distressButton = '';
+        $('#watch').attr('class', 'advice info case');
+      break;
     }
-    this.$el.html(this.template({ question: renderQuestion, type: renderType, backButton, yesButton, noButton, enterButton, distressButton }));
+
+    this.$el.html(this.template({
+      question: renderQuestion,
+      type: renderType === 'Alert' ? 'Advice' : renderType,
+      backButton,
+      yesButton,
+      noButton,
+      enterButton,
+      distressButton,
+    }));
     return this;
   },
 });

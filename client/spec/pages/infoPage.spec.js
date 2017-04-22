@@ -40,5 +40,13 @@ describe('The Information Page', () => {
         // expect(page.$el).toContainHtml('<p class="infoBox">Is the person someone you know?</p>');
       });
     });
+    describe('face', () => {
+      it('should return to home when face button pressed', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('face');
+        expect(window.App.navigate).toHaveBeenCalledWith('home');
+      });
+    });
   });
 });
